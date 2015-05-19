@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Building an Indonesian Resource Grammar (INDRA)</title>
+    <link rel="stylesheet" href="../reveal.js-2.6.2/css/reveal.min.css"/>
+    <link rel="stylesheet" href="../reveal.js-2.6.2/css/theme/default.css" id="theme"/>
+    <link rel="stylesheet" href="../reveal.js-2.6.2/lib/css/zenburn.css"/>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Your content goes here -->
+        <section>
+           <h3>An Indonesian Resource Grammar (INDRA)<br>in the Framework of<br>Head-Driven Phrase Structure Grammar (HPSG)<br>and its Application to Machine Translation</h3>
+           <hr>
+           <h4>PhD Confirmation Exercise</h4>
+           <p>David Moeljadi</p>
+           <h4>School of Humanities and Social Sciences<br>Nanyang Technological University<br>25 May 2015</h4>
+        </section>
+        <section>
+          <h2>Outline</h2>
+          <hr>
+          <ul>
+            <li>Indonesian language</li>
+            <li>Grammar engineering</li>
+            <li>Preliminary work:
+              <br>(1) Lexical acquisition
+              <br>(2) Morphophonology</li>
+            <li>Machine translation</li>
+            <li>Research plan</li>
+          </ul>
+        </section>
+        <section>
+            <h1>INDRA</h1>
+            <h2>
+              IND<small style="vertical-align: bottom;">onesian</small>
+              R<small style="vertical-align: bottom;">esource</small>
+              <small style="vertical-align: bottom;">Gr</small>A<small style="vertical-align: bottom;">mmar</small>
+            </h2>
+        </section>
+        <section>
+          <h1>Indonesian language</h1>
+        </section>
+        <section>
+          <h1>Grammar engineering</h1>
+        </section>
+        <section>
+          <h1>Preliminary work</h1>
+        </section>
+        <section>
+          <h2>(1) Lexical acquisition</h2>
+        </section>
+        <section>
+          <section>
+            <h2>(2) Morphophonology</h2>
+          </section>
+          <section>
+            <h2>Active voice prefix meN-</h2>
+            <pre><code>
+            act-prefix := 
+            %prefix (p mem) (pl mempl) (pr mempr) (ps memps) (pt mempt)
+            (pertinggi mempertinggi) (punyai mempunyai) (b memb) (m mem)
+            (d mend) (n men) (r mer) (s meny) (sl mensl) (sr mensr) 
+            (syairkan menyairkan) (sw mensw) (st menst) (z menz) (l mel) 
+            (c menc) (cek mengecek) (bon mengebon) (bor mengebor)
+            act-lex-rule &amp;
+              [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
+            </code></pre>
+            <p>irules.tdl</p>
+          </section>
+        </section>
+        <section>
+          <h1>Machine translation</h1>
+        </section>
+        <section>
+          <h1>Research plan</h1>
+        </section>
+        <section>
+          <h1>Bibliography</h1>
+        </section>
+        <section>
+              <h3 style="text-shadow:0px 0px 10px #000;">Thank you</h3>
+              <h2 style="box-shadow: 0px 0px 5px #000;background-color:rgba(0, 0, 0, 0.25);padding: 10px;">Terima kasih!</h2>
+              <h3 style="text-shadow:0px 0px 10px #000;">تريما کاسي</h3>
+        </section>
+        <!-- End of your content -->
+      </div>
+    </div>
+    <script src="../reveal.js-2.6.2/lib/js/head.min.js"></script>
+    <script src="../reveal.js-2.6.2/js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        dependencies: [
+           { src: '../reveal.js-2.6.2/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        ],
+      });
+    </script>
+  </body>
+</html>
