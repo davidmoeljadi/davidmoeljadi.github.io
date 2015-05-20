@@ -27,7 +27,7 @@
           <ul>
             <li>INDRA</li>
             <li>Indonesian language</li>
-            <li>Theoretical framework</li>
+            <li>Theoretical framework and tools</li>
             <li>Grammar engineering</li>
             <li>Preliminary work:</li>
               <ol>
@@ -54,7 +54,7 @@
               <li>an open-source computational grammar for Indonesian.</li>
               <li>modelled in Head-Driven Phrase Structure Grammar (HPSG)
               <br>and Minimal Recursion Semantics (MRS).</li>
-              <li>created and developed using tools from <a target="blank" href="http://moin.delph-in.net/">DELPH-IN</a>.</li>
+              <li>created and developed using tools from <a target="blank" href="http://delph-in.net/">DELPH-IN</a>.</li>
               <li>aims to parse Indonesian text in <a target="blank" href="http://compling.hss.ntu.edu.sg/ntumc/">NTU-MC</a>.</li>
               <li>will be applied to machine translation.</li>
               <li>stored in <a target="blank" href="https://github.com/davidmoeljadi/INDRA">GitHub</a>.</li>
@@ -239,13 +239,11 @@
         </section>
         <section data-transition="none" data-transition-speed="fast">
           <section data-transition="none" data-transition-speed="fast">
-            <h1>Theoretical framework</h1>
+            <h1>Theoretical framework and tools</h1>
           </section>
           <section data-transition="none" data-transition-speed="fast">
-            <h3>Head-Driven Phrase Structure Grammar (HPSG)</h3>
+            <h3>Phrase Structure Grammar</h3>
             <hr>
-            <ul>
-              <li>Phrase Structure Grammar:</li>
               <table>
                 <tr>
                   <td>
@@ -253,27 +251,185 @@
                       <li>a set of <b>rules</b>:
                       <br>S &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8594; NP VP
                       <br>NP &#8594; N
-                      <br>VP &#8594; V</li>
+                      <br>VP &#8594; V NP</li>
                     </ul>
                   </td>
                   <td>
                     <ul>
                       <li>a <b>lexicon</b> of POS and words:
-                      <br>N: <i>anjing</i> "dog"
-                      <br>V: <i>menggonggong</i> "bark"</li>
+                      <br>N : <i>anjing</i> "dog", <i>kucing</i> "cat"
+                      <br>V : <i>mengejar</i> "chase"
+                      <br>&nbsp;</li>
                     </ul>
                   </td>
                 </tr>
               </table>
-              <li class="fragment">What sentence(s) can be generated from the rules and lexicon above?</li>
-                <ul>
-                  <li class="fragment"><i>Anjing menggonggong</i> "Dogs bark"</li>
-                </ul>
-              <li class="fragment">HPSG adds the idea that the lexical head is passed up the parse tree.</li>
-            </ul>
+              <br>
+              <p class="fragment">What sentences can be generated
+              <br>from the rules and lexicon above?</p>
+              <ol>
+                <li class="fragment"><i>Anjing mengejar kucing</i> "Dogs chase cats"</li>
+                <li class="fragment"><i>Kucing mengejar anjing</i> "Cats chase dogs"</li>
+              </ol>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Phrase Structure Grammar</h3>
+            <hr>
+            <img src="../images/anjingkucing.jpg" height="200"/>
+            <img src="../images/kucinganjing.jpg" height="200"/>
+            <p>Parse trees of <i>anjing mengejar kucing</i> "dogs chase cats" (left) and <i>kucing mengejar anjing</i> "cats chase dogs" (right)</p>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Head-driven Phrase Structure Grammar (HPSG)</h3>
+            <hr>
+            <table>
+              <tr>
+                <td colspan="2">
+                  <ul>
+                    <li>The lexical head is passed up the parse tree.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <ul>
+                    <li>Feature structures
+                    <br><img src="../images/anjing.jpg" height="200"/>
+                    <br><p>Feature structures of <i>anjing</i> "dog"</p>
+                    </li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Type hierarchy
+                    <br><img src="../images/noun.jpg" height="350"/>
+                    <br><p>Type hierarchy of noun</p>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
             <p style="text-align:right;">
               <small>(Sag et al., 2003; Jurafsky &amp; Martin, 2009)</small>
             </p>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Minimal Recursion Semantics (MRS)</h3>
+            <hr>
+            <ul>
+              <li>finds the correct lexemes and the relationships between them</li>
+            </ul>
+            <img src="../images/anjingkucingmrs.jpg" height="350"/>
+            <p>MRS of <i>anjing mengejar kucing</i> "dogs chase cats"</p>
+            <p style="text-align:right;">
+              <small>(Copestake et al., 2005)</small>
+            </p>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>DEep Linguistic Processing with HPSG - INitiative (DELPH-IN)</h3>
+            <hr>
+            <ul>
+              <li>builds and develops open source grammars, tools for grammar development and applications using HPSG and MRS.</li>
+              <li>Grammars:</li>
+              <ol>
+                <li>English Resource Grammar (ERG)</li>
+                <li>Japanese Grammar (Jacy)</li>
+                <li>Chinese Grammar (Zhong)</li>
+              </ol>
+            </ul>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Type Description Language (TDL)</h3>
+            <pre><code>
+            anjing := nonhuman-noun-noun-lex & 
+              [ STEM < "anjing" >,
+                SYNSEM.LKEYS.KEYREL.PRED "_anjing_n_rel" ].
+
+            kejar := tr-verb-lex &
+              [ STEM < "kejar" >,
+                SYNSEM.LKEYS.KEYREL.PRED "_kejar_v_rel" ].
+
+            kucing := nonhuman-noun-noun-lex &
+              [ STEM < "kucing" >,
+                SYNSEM.LKEYS.KEYREL.PRED "_kucing_n_rel" ].
+            </code></pre>
+            <p>TDL of <i>anjing</i> "dog", <i>kejar</i> "chase" and <i>kucing</i> "cat"</p>
+            <p style="text-align:right;">
+              <small>(Copestake et al., 2000)</small>
+            </p>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Full Forest Treebanker (FFTB)</h3>
+            <hr>
+            <ul>
+              <li>Makes a syntactically annotated corpus by annotating each sentence with a parse tree</li>
+            </ul>
+            <!--<img src="../images/fftb3.jpg" height="350"/>-->
+            <img src="../images/fftb4x.jpg" height="350"/>
+            <p>Treebanking of <i>anjingnya sedang menggonggong</i>
+            <br>"the dog is barking"</p>
+            <p style="text-align:right;">
+              <small>(Packard, 2014; Jurafsky &amp; Martin, 2009)</small>
+            </p>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3><a target="blank" href="http://compling.hss.ntu.edu.sg/ntumc/">Nanyang Technological University Multilingual Corpus (NTU-MC)</a></h3>
+            <hr>
+            <ul>
+              <li>Parallel corpus, sense-tagged using a lexical database Wordnet</li>
+              <li>Indonesian text data contains 2,197 sentences from <a target="blank" href="www.yoursingapore.com">Singapore Tourism Board (STB) website</a></li>
+              <li>ongoing process of adding Sherlock Holmes short stories</li>
+              <li>INDRA aims to parse at least 60% of the Indonesian text</li>
+            </ul>
+            <br>
+            <p style="text-align:right;">
+              <small>(Tan &amp; Bond, 2012; Bond et al., 2013)</small>
+            </p>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3><a target="blank" href="http://wn-msa.sourceforge.net/">Wordnet Bahasa</a></h3>
+            <hr>
+            <ul>
+              <li>created based on Princeton Wordnet (PWN), a large English lexical database.</li>
+              <li>groups nouns, verbs, adjectives and adverbs into sets of concepts or <b>synsets</b>.</li>
+              <li>Three synsets of <i>anjing</i> "dog"
+                <br>
+                <table>
+                <tr>
+                  <td><b>Synset</b></td>
+                  <td><b>Definition</b></td>
+                </tr>
+                <tr>
+                  <td>02083346-n</td>
+                  <td>any of various fissiped mammals...</td>
+                </tr>
+                <tr>
+                  <td>10539715-n</td>
+                  <td>a person who is deemed to be despicable</td>
+                </tr>
+                <tr>
+                  <td>02084071-n</td>
+                  <td>a member of the genus Canis...</td>
+                </tr>
+                </table>
+              </li>
+            </ul>
+            <br>
+            <p style="text-align:right;">
+              <small>(Nurril Hirfana et al., 2011; Bond et al., 2014)</small>
+            </p>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>INDRA</h3>
+            <hr>
+            <ul>
+              <li>an open-source computational grammar for Indonesian.</li>
+              <li>modelled in Head-Driven Phrase Structure Grammar (HPSG)
+              <br>and Minimal Recursion Semantics (MRS).</li>
+              <li>created and developed using tools from <a target="blank" href="http://delph-in.net/">DELPH-IN</a>.</li>
+              <li>aims to parse Indonesian text in <a target="blank" href="http://compling.hss.ntu.edu.sg/ntumc/">NTU-MC</a>.</li>
+              <li>employs <a target="blank" href="http://wn-msa.sourceforge.net/">Wordnet Bahasa</a> as its lexical source.</li>
+            </ul>
           </section>
         </section>
         <section data-transition="none" data-transition-speed="fast">
