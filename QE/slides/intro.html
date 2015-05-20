@@ -11,51 +11,299 @@
     <div class="reveal">
       <div class="slides">
         <!-- Your content goes here -->
-        <section>
+        <section data-transition="none" data-transition-speed="fast">
            <h3>An Indonesian Resource Grammar (INDRA)<br>in the Framework of<br>Head-Driven Phrase Structure Grammar (HPSG)<br>and its Application to Machine Translation</h3>
            <hr>
            <h4>PhD Confirmation Exercise</h4>
            <p>David Moeljadi</p>
-           <h4>School of Humanities and Social Sciences<br>Nanyang Technological University<br>25 May 2015</h4>
+           <h4>Linguistics and Multilingual Studies<br>Nanyang Technological University<br>25 May 2015</h4>
+           <div id="img">
+              <img src="../images/ntu.jpg" height="60" alt="NTU"/>
+            </div>
         </section>
-        <section>
+        <section data-transition="none" data-transition-speed="fast">
           <h2>Outline</h2>
           <hr>
           <ul>
+            <li>INDRA</li>
             <li>Indonesian language</li>
+            <li>Theoretical framework</li>
             <li>Grammar engineering</li>
-            <li>Preliminary work:
-              <br>(1) Lexical acquisition
-              <br>(2) Morphophonology</li>
+            <li>Preliminary work:</li>
+              <ol>
+                <li>Lexical acquisition</li>
+                <li>Morphophonology</li>
+              </ol>
             <li>Machine translation</li>
             <li>Research plan</li>
           </ul>
         </section>
-        <section>
+        <section data-transition="none" data-transition-speed="fast">
+          <section data-transition="none" data-transition-speed="fast">
             <h1>INDRA</h1>
             <h2>
               IND<small style="vertical-align: bottom;">onesian</small>
               R<small style="vertical-align: bottom;">esource</small>
               <small style="vertical-align: bottom;">Gr</small>A<small style="vertical-align: bottom;">mmar</small>
             </h2>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>INDRA</h3>
+            <hr>
+            <ul>
+              <li>an open-source computational grammar for Indonesian.</li>
+              <li>modelled in Head-Driven Phrase Structure Grammar (HPSG)
+              <br>and Minimal Recursion Semantics (MRS).</li>
+              <li>created and developed using tools from <a target="blank" href="http://moin.delph-in.net/">DELPH-IN</a>.</li>
+              <li>aims to parse Indonesian text in <a target="blank" href="http://compling.hss.ntu.edu.sg/ntumc/">NTU-MC</a>.</li>
+              <li>will be applied to machine translation.</li>
+              <li>stored in <a target="blank" href="https://github.com/davidmoeljadi/INDRA">GitHub</a>.</li>
+            </ul>
+          </section>
         </section>
-        <section>
-          <h1>Indonesian language</h1>
+        <section data-transition="none" data-transition-speed="fast">
+          <section data-transition="none" data-transition-speed="fast">
+            <h1>Indonesian language</h1>
+          </section>
+          <section data-transition="none" data-transition-speed="fast" data-background="../images/Austronesia_map.jpg" data-background-size="100vw">
+            <h3>Classification</h3>
+            <hr>
+            <ul>
+              <li>Austronesian</li>
+              <ul>
+                <li>Malayo-Polynesian</li>
+                <ul>
+                  <li>Western Malayo-Polynesian</li>
+                  <ul>
+                    <li>Malayo-Chamic</li>
+                    <ul>
+                      <li>Malayic</li>
+                      <ul>
+                        <li>Malay</li>
+                        <ul>
+                          <li>Indonesian (Indonesia)</li>
+                          <li class="fragment">Standard Malay (Malaysia)</li>
+                          <li class="fragment">Brunei Malay (Brunei)</li>
+                          <li class="fragment">Local Malay (Singapore)</li>
+                          <li class="fragment">Makassar Malay (Indonesia)</li>
+                          <li class="fragment">...</li>
+                        </ul>
+                      </ul>
+                    </ul>
+                  </ul>
+                </ul>
+              </ul>
+            </ul>
+            <p style="text-align:right;">
+              <small><a target="blank" href="http://www.ethnologue.com/language/ind">(Lewis, 2009)</a></small>
+            </p>
+          </section>
+          <!--<section data-transition="none" data-transition-speed="fast">
+            <div id="img">
+              <img src="../images/Malay dialect.jpg" alt="Malay dialects"/>
+            </div>
+            <p>Figure 1: Malay dialects</p>
+          </section>-->
+          <section data-transition="none" data-transition-speed="fast" data-background="../images/Indonesia_map.jpg" data-background-size="100vw">
+          <h3>Indonesian</h3>
+            <hr>
+            <table>
+              <tr>
+                <td>
+                  <p>Alternate names</p>
+                </td>
+                <td>
+                  <p>bahasa Indonesia</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Population in Indonesia</p>
+                </td>
+                <td>
+                  <p>L1 users: 22.8 million, increasing.<br>L2 users: 140 million.</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Language status</p>
+                </td>
+                <td>
+                  <p>National language<br>(1945 Constitution, Article 36).</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Dialects</p>
+                </td>
+                <td>
+                  <p>Lexical similarity: over 80% with Standard Malay.</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Writing</p>
+                </td>
+                <td>
+                  <p>Latin script.</p>
+                </td>
+              </tr>
+            </table>
+            <p style="text-align:right;">
+              <small><a target="blank" href="http://www.ethnologue.com/language/ind">(Lewis, 2009)</a></small>
+            </p>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Language resources</h3>
+            <hr>
+            <img src="../images/kbbi.gif" height="316"/>
+            <img src="../images/TBBI.jpg" height="316"/>
+            <img src="../images/Sneddon.jpg" height="316"/>
+            <!--<img src="../images/Liaw.jpg" height="316"/>-->
+            <img src="../images/Macdonald.jpg" height="316"/>
+            <p>and many more</p>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+          <h3>Morphology and syntactic typology</h3>
+            <hr>
+            <table>
+              <tr>
+                <td>
+                  <p>Morphological classification</p>
+                </td>
+                <td>
+                  <p>mildly agglutinative</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Gender system</p>
+                </td>
+                <td>
+                  <p>no gender</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Coding of nominal plurality</p>
+                </td>
+                <td>
+                  <p>complete reduplication</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Word order</p>
+                </td>
+                <td>
+                  <p>SVO</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Position of negative word</p>
+                </td>
+                <td>
+                  <p>S-Neg-V-O</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Order of Adj and Noun</p>
+                </td>
+                <td>
+                  <p>N-Adj</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Order of Dem and Noun</p>
+                </td>
+                <td>
+                  <p>N-Dem</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Expression of pronominal subject</p>
+                </td>
+                <td>
+                  <p>obligatory PRO in subject position</p>
+                </td>
+              </tr>
+            </table>
+            <p style="text-align:right;">
+              <small>(<a target="blank" href="http://wals.info/languoid/lect/wals_code_ind">WALS</a>; <a target="blank" href="http://septinalarasati.com/papers/paper6.pdf">Larasati et al, 2011</a>)</small>
+            </p>
+          </section>
         </section>
-        <section>
-          <h1>Grammar engineering</h1>
+        <section data-transition="none" data-transition-speed="fast">
+          <section data-transition="none" data-transition-speed="fast">
+            <h1>Theoretical framework</h1>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Head-Driven Phrase Structure Grammar (HPSG)</h3>
+            <hr>
+            <ul>
+              <li>Phrase Structure Grammar:</li>
+              <table>
+                <tr>
+                  <td>
+                    <ul>
+                      <li>a set of <b>rules</b>:
+                      <br>S &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8594; NP VP
+                      <br>NP &#8594; N
+                      <br>VP &#8594; V</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>a <b>lexicon</b> of POS and words:
+                      <br>N: <i>anjing</i> "dog"
+                      <br>V: <i>menggonggong</i> "bark"</li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>
+              <li class="fragment">What sentence(s) can be generated from the rules and lexicon above?</li>
+                <ul>
+                  <li class="fragment"><i>Anjing menggonggong</i> "Dogs bark"</li>
+                </ul>
+              <li class="fragment">HPSG adds the idea that the lexical head is passed up the parse tree.</li>
+            </ul>
+            <p style="text-align:right;">
+              <small>(Sag et al., 2003; Jurafsky &amp; Martin, 2009)</small>
+            </p>
+          </section>
         </section>
-        <section>
+        <section data-transition="none" data-transition-speed="fast">
+          <section data-transition="none" data-transition-speed="fast">
+            <h1>Grammar engineering</h1>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Grammar engineering</h3>
+            <hr>
+            <ul>
+              <li>focused on syntax</li>
+              <li>having computer checks the model for consistency
+              <br>and tests against a much broader range of examples</li>
+            </ul>
+            <p style="text-align:right;">
+              <small>(Bender &amp; Fokkens, 2010)</small>
+            </p>
+          </section>
+        </section>
+        <section data-transition="none" data-transition-speed="fast">
           <h1>Preliminary work</h1>
         </section>
-        <section>
+        <section data-transition="none" data-transition-speed="fast">
           <h2>(1) Lexical acquisition</h2>
         </section>
-        <section>
-          <section>
+        <section data-transition="none" data-transition-speed="fast">
+          <section data-transition="none" data-transition-speed="fast">
             <h2>(2) Morphophonology</h2>
           </section>
-          <section>
+          <section data-transition="none" data-transition-speed="fast">
             <h2>Active voice prefix meN-</h2>
             <pre><code>
             act-prefix := 
@@ -70,19 +318,27 @@
             <p>irules.tdl</p>
           </section>
         </section>
-        <section>
-          <h1>Machine translation</h1>
+        <section data-transition="none" data-transition-speed="fast">
+          <section data-transition="none" data-transition-speed="fast">
+            <h1>Machine translation</h1>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <div id="img">
+              <img src="../images/transfergrammar.jpg" alt="Transfer grammar"/>
+            </div>
+            <p>Figure 1: Transfer grammar for machine translation</p>
+          </section>
         </section>
-        <section>
+        <section data-transition="none" data-transition-speed="fast">
           <h1>Research plan</h1>
         </section>
-        <section>
+        <section data-transition="none" data-transition-speed="fast">
           <h1>Bibliography</h1>
         </section>
-        <section>
-              <h3 style="text-shadow:0px 0px 10px #000;">Thank you</h3>
-              <h2 style="box-shadow: 0px 0px 5px #000;background-color:rgba(0, 0, 0, 0.25);padding: 10px;">Terima kasih!</h2>
-              <h3 style="text-shadow:0px 0px 10px #000;">تريما کاسي</h3>
+        <section data-transition="none" data-transition-speed="fast">
+              <h3>Thank you</h3>
+              <h2 style="box-shadow: 0px 0px 5px #000;padding: 10px;">Terima kasih!</h2>
+              <h3>تريما کاسي</h3>
         </section>
         <!-- End of your content -->
       </div>
@@ -98,6 +354,7 @@
            { src: '../reveal.js-2.6.2/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
         ],
       });
+      Reveal.configure({ slideNumber: 'c / t' });
     </script>
   </body>
 </html>
