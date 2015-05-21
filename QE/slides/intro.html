@@ -51,19 +51,24 @@
             <h3>INDRA</h3>
             <hr>
             <ul>
-              <li>an open-source computational grammar for Indonesian.</li>
-              <li>modelled in Head-Driven Phrase Structure Grammar (HPSG)
-              <br>and Minimal Recursion Semantics (MRS).</li>
+              <li>the first grammar modelled in Head-Driven Phrase Structure Grammar (HPSG) and Minimal Recursion Semantics (MRS).</li>
+              <li>an <a target="blank" href="https://github.com/davidmoeljadi/INDRA">open-source computational grammar</a> for Indonesian.</li>
               <li>created and developed using tools from <a target="blank" href="http://delph-in.net/">DELPH-IN</a>.</li>
-              <li>aims to parse Indonesian text in <a target="blank" href="http://compling.hss.ntu.edu.sg/ntumc/">NTU-MC</a>.</li>
+              <li>aims to parse and treebank Indonesian text in <a target="blank" href="http://compling.hss.ntu.edu.sg/ntumc/">NTU-MC</a>.</li>
               <li>will be applied to machine translation.</li>
-              <li>stored in <a target="blank" href="https://github.com/davidmoeljadi/INDRA">GitHub</a>.</li>
             </ul>
           </section>
         </section>
         <section data-transition="none" data-transition-speed="fast">
           <section data-transition="none" data-transition-speed="fast">
             <h1>Indonesian language</h1>
+            <hr>
+            <ol>
+              <li>Classification</li>
+              <li>Language resources</li>
+              <li>Morphology and syntactic typology</li>
+              <li>Indonesian sentences</li>
+            </ol>
           </section>
           <section data-transition="none" data-transition-speed="fast" data-background="../images/Austronesia_map.jpg" data-background-size="100vw">
             <h3>Classification</h3>
@@ -236,10 +241,35 @@
               <small>(<a target="blank" href="http://wals.info/languoid/lect/wals_code_ind">WALS</a>; <a target="blank" href="http://septinalarasati.com/papers/paper6.pdf">Larasati et al, 2011</a>)</small>
             </p>
           </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Indonesian sentences</h3>
+            <hr>
+            <pre style="font-size:22px;line-height:.8em;">
+            <ol>
+              <li><i>Anjing&#09;menggonggong.</i>
+              <br>dog&#09;bark
+              <br>"Dogs bark." (own data)</li>
+              <li><i>Anjing&#09;mengejar&#09;&nbsp;kucing.</i>
+              <br>anjing&#09;meN-kejar&nbsp;kucing
+              <br>dog&#09;ACT-chase&nbsp;cat
+              <br>"Dogs chase cats." (own data)</li>
+              <li><i>Kucing&#09;dikejar&#09;&nbsp;&nbsp;anjing.</i>
+              <br>kucing&#09;di-kejar&#09;&nbsp;&nbsp;anjing
+              <br>cat&#09;PASS-chase&nbsp;dog
+              <br>"Cats are chased by dogs." (own data)</li>
+            </ol>
+            </pre>
+          </section>
         </section>
         <section data-transition="none" data-transition-speed="fast">
           <section data-transition="none" data-transition-speed="fast">
-            <h1>Theoretical framework and tools</h1>
+            <h1>Theoretical framework</h1>
+            <hr>
+            <ol>
+              <li>Phrase structure grammar</li>
+              <li>Head-driven Phrase Structure Grammar (HPSG)</li>
+              <li>Minimal Recursion Semantics (MRS)</li>
+            </ol>
           </section>
           <section data-transition="none" data-transition-speed="fast">
             <h3>Phrase Structure Grammar</h3>
@@ -282,35 +312,61 @@
           <section data-transition="none" data-transition-speed="fast">
             <h3>Head-driven Phrase Structure Grammar (HPSG)</h3>
             <hr>
-            <table>
-              <tr>
-                <td colspan="2">
-                  <ul>
-                    <li>The lexical head is passed up the parse tree.</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li>Feature structures
-                    <br><img src="../images/anjing.jpg" height="200"/>
-                    <br><p>Feature structures of <i>anjing</i> "dog"</p>
-                    </li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>Type hierarchy
-                    <br><img src="../images/noun.jpg" height="350"/>
-                    <br><p>Type hierarchy of noun</p>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </table>
+                <ul>
+                  <li>The lexical head is passed up the parse tree.</li>
+                  <li>Feature structures
+                  <br><img src="../images/anjing.jpg" height="220"/>
+                  <br><p>Feature structures of <i>anjing</i> "dog"</p>
+                  </li>
+                </ul>
             <p style="text-align:right;">
               <small>(Sag et al., 2003; Jurafsky &amp; Martin, 2009)</small>
+            </p>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Head-driven Phrase Structure Grammar (HPSG)</h3>
+            <hr>
+              <ul>
+                  <li>Type hierarchy
+                  <br><img src="../images/noun.jpg" height="400"/>
+                  <br><p>Type hierarchy of noun</p>
+                  </li>
+              </ul>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Head-driven Phrase Structure Grammar (HPSG)</h3>
+            <hr>
+              <ul>
+                  <li>Constraints
+                  <li>Three main (optional) classifiers
+                    <table>
+                      <tr>
+                        <td><i>buah</i></td>
+                        <td><i>ekor</i></td>
+                        <td><i>orang</i></td>
+                      </tr>
+                      <tr>
+                        <td><i>buku</i> "book"
+                        <br><i>fakta</i> "fact"</td>
+                        <td><i>anjing</i> "dog"
+                        <br><i>kucing</i> "cat"</td>
+                        <td><i>ibu</i> "mother"
+                        <br><i>ayah</i> "father"</td>
+                      </tr>
+                    </table>
+                  </li>
+                  <li>
+                    <pre style="font-size:22px;line-height:.2em;">
+                    <ol>
+                      <li>* <i>dua</i> "two" <i>buah</i> (<i>anjing/ayah</i>)</li>
+                      <li>* <i>dua ekor</i> (<i>buku/ibu</i>)</li>
+                      <li>* <i>dua orang</i> (<i>fakta/kucing</i>)</li>
+                    </ol>
+                    </pre>
+                  </li>
+              </ul>
+              <p style="text-align:right;">
+              <small>(Sneddon et al., 2010; Alwi et al., 2014)</small>
             </p>
           </section>
           <section data-transition="none" data-transition-speed="fast">
@@ -323,6 +379,36 @@
             <p>MRS of <i>anjing mengejar kucing</i> "dogs chase cats"</p>
             <p style="text-align:right;">
               <small>(Copestake et al., 2005)</small>
+            </p>
+          </section>
+        </section>
+        <section data-transition="none" data-transition-speed="fast">
+          <section data-transition="none" data-transition-speed="fast">
+            <h1>Grammar engineering and tools</h1>
+            <hr>
+            <ol>
+              <li>Why grammar engineering?</li>
+              <li>Research collaboration: DELPH-IN
+                <ul>
+                  <li>Type Description Language (TDL)</li>
+                  <li>Treebanker: FFTB</li>
+                  <li>MRS Test-suite</li>
+                </ul>
+              </li>
+              <li>Methodology</li>
+            </ol>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Grammar engineering</h3>
+            <hr>
+            <ul>
+              <li>focused on syntax</li>
+              <li>aims to parse and generate text</li>
+              <li>having computer checks the model for consistency
+              <br>and tests against a much broader range of examples</li>
+            </ul>
+            <p style="text-align:right;">
+              <small>(Bender &amp; Fokkens, 2010)</small>
             </p>
           </section>
           <section data-transition="none" data-transition-speed="fast">
@@ -365,12 +451,321 @@
               <li>Makes a syntactically annotated corpus by annotating each sentence with a parse tree</li>
             </ul>
             <!--<img src="../images/fftb3.jpg" height="350"/>-->
-            <img src="../images/fftb4x.jpg" height="350"/>
-            <p>Treebanking of <i>anjingnya sedang menggonggong</i>
-            <br>"the dog is barking"</p>
+            <img src="../images/fftb5x.jpg" height="350"/>
+            <img src="../images/fftb6x.jpg" height="350"/>
+            <img src="../images/fftb7x.jpg" height="350"/>
+            <p>Treebanking of Indonesian text with FFTB</p>
             <p style="text-align:right;">
               <small>(Packard, 2014; Jurafsky &amp; Martin, 2009)</small>
             </p>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>MRS Test-suite</h3>
+            <hr>
+            <ul>
+              <li>Test-suite: a sample of text illustrating a particular language phenomenon or construction:
+                <ol>Phenomena based test-suite: hand-made, MRS test-suite</ol>
+                <ol>Natural test-suite: corpus</ol>
+              </li>
+              <li>MRS Test-suite: a representative set of sentences designed to show some of the MRS phenomena</li>
+              <li>The original set of 107 sentences are in English</li>
+              <li>Example:
+                <table>
+                  <tr>
+                    <td>Phenomenon</td>
+                    <td>English</td>
+                    <td>Indonesian</td>
+                  </tr>
+                  <tr>
+                    <td>1 argument</td>
+                    <td>Abrams barked</td>
+                    <td>Adi menggonggong</td>
+                  </tr>
+                  <tr>
+                    <td>2 arguments</td>
+                    <td>Abrams chased Browne</td>
+                    <td>Adi mengejar Budi</td>
+                  </tr>
+                </table>
+              </li>
+            </ul>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Methodology</h3>
+            <hr>
+            <ol>
+              <li>Define the phenomenon to be analyzed</li>
+              <li>Do literature review:
+                <ul>
+                  <li>Reference grammars</li>
+                  <li>Linguistic papers</li>
+                </ul>
+              </li>
+              <li>Prepare sample sentences (test-suites) having that phenomenon</li>
+              <li>Analyze and model the analysis in HPSG</li>
+              <li>Implement in TDL</li>
+              <li>Check whether sample sentences can be parsed or not</li>
+              <li>Debug the grammar if problems are found</li>
+              <li>Treebank the sentences using FFTB and evaluate</li>
+              <li>Write-up</li>
+            </ol>
+            <p style="text-align:right;">
+              <small>(Bender et al., 2011)</small>
+            </p>
+          </section>
+        </section>
+        <section data-transition="none" data-transition-speed="fast">
+          <h1>Preliminary work</h1>
+          <hr>
+          <ol>
+            <li>Lexical (verb) acquisition</li>
+            <li>Morphophonology</li>
+          </ol>
+        </section>
+        <section data-transition="none" data-transition-speed="fast">
+          <section data-transition="none" data-transition-speed="fast">
+            <h2>(1) Lexical (verb) acquisition</h2>
+            <hr>
+            <ol>
+              <li>Assumptions</li>
+              <li>Verbs in ERG</li>
+              <li>Lexical source: Wordnet</li>
+              <li>Methodology</li>
+            </ol>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Assumptions</h3>
+            <hr>
+            <ul>
+              <li>Inputting words manually into the grammar is labor intensive and time consuming
+              <br>&#8594; (Semi-)automatic lexical acquisition is vital
+              <br>&#8594; <a target="blank" href="http://wn-msa.sourceforge.net/">Wordnet Bahasa</a> can be the lexical source</li>
+              <li>The number of arguments of verbs with similar meaning should be the same across languages
+              <br>&#8594; Verb subcategorization in <a target="blank" href="http://www.delph-in.net/erg/">English Resource Grammar (ERG)</a> can be used
+              </li>
+            </ul>
+            <p style="text-align:right;">
+              <small>(Fujita &amp; Bond, 2008; Jurafsky &amp; Martin, 2009)</small>
+            </p>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Verbs in English Resource Grammar (ERG)</h3>
+            <hr>
+            <ul>
+              <li>345 verb types: intransitive, transitive, 'be'-type etc.</li>
+              <li>top 11 most frequently used types in the corpus were chosen
+              <br>Examples:
+              <ol>
+                <li>verb of motion (+PP): <i>go</i>, <i>come</i></li>
+                <li>intransitive: <i>occur</i>, <i>stand</i></li>
+                <li>verb with optional complementizer: <i>believe</i>, <i>know</i></li>
+              </ol>
+              </li>
+            </ul>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3><a target="blank" href="http://wn-msa.sourceforge.net/">Wordnet</a></h3>
+            <hr>
+            <ul>
+              <li>a lexical source, created based on Princeton Wordnet (PWN), a large English lexical database.</li>
+              <li>groups nouns, verbs, adjectives and adverbs into sets of concepts or <b>synsets</b>.</li>
+              <li>verb frames or subcategorization for each verb</li>
+              <li>Three of six synsets of <i>eat</i>
+                <br>
+                <table>
+                <tr>
+                  <td><b>Synset</b></td>
+                  <td><b>Definition</b></td>
+                  <td><b>Verb frame</b></td>
+                </tr>
+                <tr>
+                  <td>01168468-v</td>
+                  <td>Take in solid food</td>
+                  <td>8 Sb ----s sth</td>
+                </tr>
+                <tr>
+                  <td>01166351-v</td>
+                  <td>Eat a meal, take a meal</td>
+                  <td>2 Sb ----s</td>
+                </tr>
+                <tr>
+                  <td>01157517-v</td>
+                  <td>Use up (resources or materials)</td>
+                  <td>11 Sth ----s sth
+                  <br>8 Sb ----s sth</td>
+                </tr>
+                </table>
+              </li>
+            </ul>
+            <br>
+            <p style="text-align:right;">
+              <small>(Nurril Hirfana et al., 2011; Bond et al., 2014)</small>
+            </p>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Methodology</h3>
+            <hr>
+            <img src="../images/ergwordnet.jpg" height="300" alt="Lexical acquisition"/>
+            <ol>
+              <li>Check whether the verb is in Wordnet</li>
+              <li>Check whether the verb has Indonesian translation(s)</li>
+              <li>Check whether the verb has the correct verb frame(s)</li>
+              <li>Check manually the Indonesian translation(s)</li>
+            </ol>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Results</h3>
+            <hr>
+            <ul>
+              <li>939 subcategorized verbs were added to INDRA within 3 days</li>
+              <li>the grammar's coverage can be improved</li>
+              <li>Future work: further extract more words from various parts-of-speech</li>
+              <li>Coverage of MRS test-suite before and after lexical acquisition
+              <br>
+                <table>
+                  <tr>
+                    <td></td>
+                    <td>Total parses / total sentences (coverage)</td>
+                  </tr>
+                  <tr>
+                    <td>Before</td>
+                    <td align="center">52 / 172 (30.2%)</td>
+                  </tr>
+                  <tr>
+                    <td>After</td>
+                    <td align="center">55 / 172 (32.0%)</td>
+                  </tr>
+                </table>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section data-transition="none" data-transition-speed="fast">
+          <section data-transition="none" data-transition-speed="fast">
+            <h2>(2) Morphophonology</h2>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Active and passive voice</h3>
+            <hr>
+            <ul>
+              <li>inflection with prefixes <i>meN-</i> and <i>di-</i></li>
+            </ul>
+            <pre style="font-size:22px;line-height:.8em;">
+            <ol>
+              <li><i>Anjing&#09;mengejar&#09;&nbsp;kucing.</i>
+              <br>anjing&#09;meN-kejar&nbsp;kucing
+              <br>dog&#09;ACT-chase&nbsp;cat
+              <br>"Dogs chase cats." (own data)</li>
+              <li><i>Kucing&#09;dikejar&#09;&nbsp;&nbsp;anjing.</i>
+              <br>kucing&#09;di-kejar&#09;&nbsp;&nbsp;anjing
+              <br>cat&#09;PASS-chase&nbsp;dog
+              <br>"Cats are chased by dogs." (own data)</li>
+            </ol>
+            </pre>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Morphophonology of <i>meN-</i></h3>
+            <hr>
+            <ul>
+              <li>A number of sound changes occur when <i>meN-</i> combines with bases</li>
+              <li>Examples:
+                <table>
+                  <tr>
+                    <td>Base</td>
+                    <td><i>meN-</i>+base</td>
+                    <td>meaning</td>
+                  </tr>
+                  <tr>
+                    <td><i><b>p</b>akai</i></td>
+                    <td><i>me<b>m</b>akai</i></td>
+                    <td>use</td>
+                  </tr>
+                  <tr>
+                    <td><i><b>b</b>eli</i></td>
+                    <td><i>me<b>mb</b>eli</i></td>
+                    <td>buy</td>
+                  </tr>
+                  <tr>
+                    <td><i><b>t</b>anam</i></td>
+                    <td><i>me<b>n</b>anam</i></td>
+                    <td>plant</td>
+                  </tr>
+                  <tr>
+                    <td><i><b>d</b>apat</i></td>
+                    <td><i>me<b>nd</b>apat</i></td>
+                    <td>get</td>
+                  </tr>
+                  <tr>
+                    <td><i><b>k</b>ejar</i></td>
+                    <td><i>me<b>ng</b>ejar</i></td>
+                    <td>chase</td>
+                  </tr>
+                  <tr>
+                    <td><i><b>g</b>anti</i></td>
+                    <td><i>me<b>ngg</b>anti</i></td>
+                    <td>replace</td>
+                  </tr>
+                  <tr>
+                    <td><i><b>c</b>ek</i></td>
+                    <td><i>me<b>ngecek</b></i></td>
+                    <td>check</td>
+                  </tr>
+                </table>
+              </li>
+            </ul>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Morphophonology of <i>meN-</i></h3>
+            <hr>
+            <img src="../images/meng.jpg" alt="allomorphs of meN-"/>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Implementation in TDL</h3>
+            <hr>
+            <pre><code>
+            act-prefix := 
+            %prefix (p mem) (pl mempl) (pr mempr) (ps memps) (pt mempt)
+            (pertinggi mempertinggi) (punyai mempunyai) (b memb) (m mem)
+            (d mend) (n men) (r mer) (s meny) (sl mensl) (sr mensr) 
+            (syairkan menyairkan) (sw mensw) (st menst) (z menz) (l mel) 
+            (c menc) (cek mengecek) (bon mengebon) (bor mengebor)
+            act-lex-rule &amp;
+              [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
+            </code></pre>
+            <p>a small extract of inflectional rules meN- in TDL</p>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Results</h3>
+            <hr>
+            <img src="../images/anjingkucing.jpg" height="250" />
+            <p>parse tree of anjing mengejar kucing "dogs chase cats"</p>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <h3>Results</h3>
+            <hr>
+            <img src="../images/anjingkucingmrs.jpg" height="350" />
+            <p>MRS of anjing mengejar kucing "dogs chase cats"</p>
+          </section>
+        </section>
+        <section data-transition="none" data-transition-speed="fast">
+          <section data-transition="none" data-transition-speed="fast">
+            <h1>Machine translation</h1>
+          </section>
+          <section data-transition="none" data-transition-speed="fast">
+            <div id="img">
+              <img src="../images/transfergrammar.jpg" alt="Transfer grammar"/>
+            </div>
+            <p>Figure 1: Transfer grammar for machine translation</p>
+          </section>
+        </section>
+        <section data-transition="none" data-transition-speed="fast">
+          <section data-transition="none" data-transition-speed="fast">
+            <h1>Research plan</h1>
+            <hr>
+            <ol>
+              <li>Corpus: NTU-MC</li>
+              <li>Summary</li>
+            </0l>
           </section>
           <section data-transition="none" data-transition-speed="fast">
             <h3><a target="blank" href="http://compling.hss.ntu.edu.sg/ntumc/">Nanyang Technological University Multilingual Corpus (NTU-MC)</a></h3>
@@ -387,39 +782,6 @@
             </p>
           </section>
           <section data-transition="none" data-transition-speed="fast">
-            <h3><a target="blank" href="http://wn-msa.sourceforge.net/">Wordnet Bahasa</a></h3>
-            <hr>
-            <ul>
-              <li>created based on Princeton Wordnet (PWN), a large English lexical database.</li>
-              <li>groups nouns, verbs, adjectives and adverbs into sets of concepts or <b>synsets</b>.</li>
-              <li>Three synsets of <i>anjing</i> "dog"
-                <br>
-                <table>
-                <tr>
-                  <td><b>Synset</b></td>
-                  <td><b>Definition</b></td>
-                </tr>
-                <tr>
-                  <td>02083346-n</td>
-                  <td>any of various fissiped mammals...</td>
-                </tr>
-                <tr>
-                  <td>10539715-n</td>
-                  <td>a person who is deemed to be despicable</td>
-                </tr>
-                <tr>
-                  <td>02084071-n</td>
-                  <td>a member of the genus Canis...</td>
-                </tr>
-                </table>
-              </li>
-            </ul>
-            <br>
-            <p style="text-align:right;">
-              <small>(Nurril Hirfana et al., 2011; Bond et al., 2014)</small>
-            </p>
-          </section>
-          <section data-transition="none" data-transition-speed="fast">
             <h3>INDRA</h3>
             <hr>
             <ul>
@@ -427,66 +789,10 @@
               <li>modelled in Head-Driven Phrase Structure Grammar (HPSG)
               <br>and Minimal Recursion Semantics (MRS).</li>
               <li>created and developed using tools from <a target="blank" href="http://delph-in.net/">DELPH-IN</a>.</li>
-              <li>aims to parse Indonesian text in <a target="blank" href="http://compling.hss.ntu.edu.sg/ntumc/">NTU-MC</a>.</li>
+              <li>aims to parse and treebank Indonesian text in <a target="blank" href="http://compling.hss.ntu.edu.sg/ntumc/">NTU-MC</a>.</li>
               <li>employs <a target="blank" href="http://wn-msa.sourceforge.net/">Wordnet Bahasa</a> as its lexical source.</li>
             </ul>
           </section>
-        </section>
-        <section data-transition="none" data-transition-speed="fast">
-          <section data-transition="none" data-transition-speed="fast">
-            <h1>Grammar engineering</h1>
-          </section>
-          <section data-transition="none" data-transition-speed="fast">
-            <h3>Grammar engineering</h3>
-            <hr>
-            <ul>
-              <li>focused on syntax</li>
-              <li>having computer checks the model for consistency
-              <br>and tests against a much broader range of examples</li>
-            </ul>
-            <p style="text-align:right;">
-              <small>(Bender &amp; Fokkens, 2010)</small>
-            </p>
-          </section>
-        </section>
-        <section data-transition="none" data-transition-speed="fast">
-          <h1>Preliminary work</h1>
-        </section>
-        <section data-transition="none" data-transition-speed="fast">
-          <h2>(1) Lexical acquisition</h2>
-        </section>
-        <section data-transition="none" data-transition-speed="fast">
-          <section data-transition="none" data-transition-speed="fast">
-            <h2>(2) Morphophonology</h2>
-          </section>
-          <section data-transition="none" data-transition-speed="fast">
-            <h2>Active voice prefix meN-</h2>
-            <pre><code>
-            act-prefix := 
-            %prefix (p mem) (pl mempl) (pr mempr) (ps memps) (pt mempt)
-            (pertinggi mempertinggi) (punyai mempunyai) (b memb) (m mem)
-            (d mend) (n men) (r mer) (s meny) (sl mensl) (sr mensr) 
-            (syairkan menyairkan) (sw mensw) (st menst) (z menz) (l mel) 
-            (c menc) (cek mengecek) (bon mengebon) (bor mengebor)
-            act-lex-rule &amp;
-              [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
-            </code></pre>
-            <p>irules.tdl</p>
-          </section>
-        </section>
-        <section data-transition="none" data-transition-speed="fast">
-          <section data-transition="none" data-transition-speed="fast">
-            <h1>Machine translation</h1>
-          </section>
-          <section data-transition="none" data-transition-speed="fast">
-            <div id="img">
-              <img src="../images/transfergrammar.jpg" alt="Transfer grammar"/>
-            </div>
-            <p>Figure 1: Transfer grammar for machine translation</p>
-          </section>
-        </section>
-        <section data-transition="none" data-transition-speed="fast">
-          <h1>Research plan</h1>
         </section>
         <section data-transition="none" data-transition-speed="fast">
           <h1>Bibliography</h1>
