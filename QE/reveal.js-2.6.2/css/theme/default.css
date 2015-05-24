@@ -65,7 +65,7 @@ body {
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: #6d919d;
+  color: #57747d;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -74,7 +74,7 @@ body {
   transition: color .15s ease; }
 
 .reveal a:not(.image):hover {
-  color: #6d919d;
+  color: #57747d;
   text-shadow: none;
   border: none; }
 
@@ -101,9 +101,22 @@ body {
   border-color: #1f292d;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
- #img {
-  opacity:0.9;
-  }
+/*********************************************
+ * TABLE
+ *********************************************/
+.reveal table#a {
+    border-collapse: collapse;
+}
+
+.reveal table#a tr {
+    border: 1px solid black;
+}
+
+.reveal table tr.bottom th { border-bottom: thin solid black; }
+
+.reveal table tr.bawah td { border-bottom: thin solid black; }
+
+.reveal table tr td.center { text-align: center; }
 
 /*********************************************
  * NAVIGATION CONTROLS
@@ -125,16 +138,16 @@ body {
   border-top-color: #1f292d; }
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #6d919d; }
+  border-right-color: #57747d; }
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #6d919d; }
+  border-left-color: #57747d; }
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #6d919d; }
+  border-bottom-color: #57747d; }
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #6d919d; }
+  border-top-color: #57747d; }
 
 /*********************************************
  * PROGRESS BAR
