@@ -120,6 +120,8 @@ body {
 
 .reveal table tr td.kanan { border-right: thin solid black; }
 
+.reveal table tr th.center { text-align: center; }
+
 .reveal table tr td.center { text-align: center; }
 
 .reveal table tr td.right { text-align: right; }
