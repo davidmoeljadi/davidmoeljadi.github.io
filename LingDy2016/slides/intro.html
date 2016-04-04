@@ -14,7 +14,7 @@
         <section>
            <h3>Building an open-source computational grammar<br>for Indonesian “INDRA“</h3>
            <hr>
-           <h4>1st LingDy Forum at <a href="http://www.aa.tufs.ac.jp/en">ILCAA, Tokyo</a></h4>
+           <h4><a href="http://lingdy.aacore.jp/en/news/the-first-lingdy-forum-in-2016-5-april-2016.html">1st LingDy Forum</a> at <a href="http://www.aa.tufs.ac.jp/en">ILCAA, Tokyo</a></h4>
            <br>
            <p>David Moeljadi</p>
            <h4>Linguistics and Multilingual Studies<br>Nanyang Technological University<br><br>5 April 2016</h4>
@@ -36,7 +36,7 @@
             <li>Preliminary work:</li>
               <ol>
                 <li>Lexical acquisition</li>
-                <li>Morphophonology</li>
+                <li>Morphology</li>
               </ol>
             <li>Machine translation</li>
             <li>Research plan</li>
@@ -498,7 +498,7 @@
             </p>
           </section>
           <section>
-            <h3><a target="blank" href="http://www.delph-in.net">DEep Linguistic Processing with HPSG - INitiative (DELPH-IN)</a></h3>
+            <h3><a target="blank" href="http://www.delph-in.net">DEep Linguistic Processing with HPSG - INitiative<br>(DELPH-IN)</a></h3>
             <hr>
             <ul>
               <li>builds and develops open source grammars, tools for grammar development and applications using <a href="#/HPSG">HPSG</a> and <a href="#/MRS">MRS</a></li>
@@ -621,7 +621,7 @@
           <hr>
           <ol>
             <li>Lexical (verb) acquisition</li>
-            <li>Morphophonology</li>
+            <li>Morphology</li>
           </ol>
         </section>
         <section>
@@ -755,11 +755,11 @@
         </section>
         <section>
           <section>
-            <h2>(2) Morphophonology</h2>
+            <h2>(2) Morphology</h2>
             <hr>
             <ol>
               <li>Active and passive voice</li>
-              <li>Morphophonology of <i>meN-</i></li>
+              <li>Morphology of <i>meN-</i></li>
               <li>Implementation in TDL</li>
               <li>Results</li>
               <li>Future work</li>
@@ -785,7 +785,7 @@
             </pre>
           </section>
           <section>
-            <h3>Morphophonology of <i>meN-</i></h3>
+            <h3>Morphology of <i>meN-</i></h3>
             <hr>
             <ul>
               <li>A number of sound changes occur when <i>meN-</i> combines with bases</li>
@@ -842,7 +842,7 @@
             </ul>
           </section>
           <section>
-            <h3>Morphophonology of <i>meN-</i></h3>
+            <h3>Morphology of <i>meN-</i></h3>
             <img src="../images/meng.jpg" alt="allomorphs of meN-"/>
           </section>
           <section>
@@ -851,10 +851,9 @@
             <pre><code>
             act-prefix := 
             %prefix (p mem) (pl mempl) (pr mempr) (ps memps) (pt mempt)
-            (pertinggi mempertinggi) (punyai mempunyai) (b memb) (m mem)
-            (d mend) (n men) (r mer) (s meny) (sl mensl) (sr mensr) 
-            (sw mensw) (st menst) (z menz) (l mel) (c menc) (ng meng) 
-            (q mengq) (h mengh) (a menga) (i mengi) (u mengu) (e menge)
+            (b memb) (m mem) (d mend) (n men) (r mer) (s meny) (sl mensl) 
+            (sr mensr) (sw mensw) (st menst) (z menz) (l mel) (c menc) 
+            (ng meng) (q mengq) (h mengh) (a menga) (i mengi) (u mengu)
             act-lex-rule &amp;
               [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
             </code></pre>
@@ -864,16 +863,16 @@
             <h3>Implementation in TDL</h3>
             <hr>
             <pre><code>
-            mengecek act-lex-rule cek
-            mengebel act-lex-rule bel
-            mengebom act-lex-rule bom
-            mengebor act-lex-rule bor
-            mengecat act-lex-rule cat
-            mengecor act-lex-rule cor
-            mengelap act-lex-rule lap
-            mengelas act-lex-rule las
-            mengelem act-lex-rule lem
-            mengepak act-lex-rule pak
+            mengecek act-prefix cek
+            mengebel act-prefix bel
+            mengebom act-prefix bom
+            mengebor act-prefix bor
+            mengecat act-prefix cat
+            mengecor act-prefix cor
+            mengelap act-prefix lap
+            mengelas act-prefix las
+            mengelem act-prefix lem
+            mengepak act-prefix pak
             </code></pre>
             <p>list up all one-syllable words and their <i>meN-</i> form in TDL</p>
           </section>
@@ -981,6 +980,18 @@
             <p style="text-align:right;">
               <small>(Tan &amp; Bond, 2012; Bond et al., 2013)</small>
             </p>
+          </section>
+          <section>
+          	<h3>Phenomena to be covered</h3>
+            <hr>
+            <ul>
+              <li>Relative clauses</li>
+              <li>Copula constructions</li>
+              <li>Passive constructions</li>
+              <li>Topic-comment constructions</li>
+              <li>Classifiers</li>
+              <li>...</li>
+            </ul>
           </section>
           <!--<section>
             <h3>Work progress and timetable</h3>
